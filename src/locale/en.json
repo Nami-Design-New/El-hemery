@@ -1,0 +1,38 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "myOrders": "My Orders",
+    "faqs": "FAQs",
+    "services": "Services",
+    "contact": "Contact Us",
+    "login": "Login",
+    "howWeWork": "How It Works",
+    "notifications": "Notifications",
+    "logout": "Sing Out",
+    "myTransactions": "My Transactions",
+    "myAddresses": "My Addresses",
+    "dashboard": "Dashboard",
+    "duaa": "Duaa",
+    "myAccount": "My Account"
+  },
+  "errorPage": {
+    "pageNotFoundTitle": "Page Not Found",
+    "pageNotFoundMessage": "We couldn't find the page you're looking for. The page might have been moved, deleted, or never existed.",
+    "errorTitle": "Error",
+    "applicationErrorTitle": "Application Error",
+    "applicationErrorMessage": "An unexpected error occurred. Please try again later.",
+    "unexpectedErrorTitle": "Unexpected Error",
+    "unexpectedErrorMessage": "An unexpected error occurred. Please try again later.",
+    "oops": "Oops!",
+    "returnToHome": "Return To Home"
+  },
+  "auth": {
+  "loginTitle": "Login",
+  "loginWithIdOnly": "Please enter your ID number to log in",
+  "idNumber": "ID Number",
+  "enterIdNumber": "Enter ID Number",
+  "signIn": "Sign In"
+}
+
+}

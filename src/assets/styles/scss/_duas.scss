@@ -1,0 +1,77 @@
+
+.duas-page {
+    padding-bottom: 40px;
+  .duas-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .duas-compass {
+    .compass-card {
+      background: linear-gradient(180deg, #fff, #fff8f8);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: $shadow;
+
+      .compass-svg {
+        width: 100%;
+        height: auto;
+        max-width: 260px;
+        display: block;
+        margin: 0 auto 12px;
+      }
+
+      .compass-meta {
+        h4 {
+          margin: 0;
+          color: $main;
+        }
+
+        small {
+          color: rgba(0, 0, 0, 0.45);
+        }
+      }
+    }
+  }
+
+  .duas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .dua-card {
+      background: $white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+      }
+
+      .dua-head {
+        h3 {
+          margin: 0;
+          color: $main;
+          font-size: 18px;
+        }
+      }
+
+      .dua-ar {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 12px;
+        color: #111;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.auth_section {
+  padding-top: 100px;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .row {
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 48px;
+    border: 1px solid $main;
+    color: $white;
+    background-color: $main;
+  }
+}

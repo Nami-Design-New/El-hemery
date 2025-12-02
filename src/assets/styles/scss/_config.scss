@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearInput {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+$main: #8E1838;
+$second: #188E6E;
+$main2: #8E183808;
+$black: #000;
+$white: #fff;
+$gray: #777;
+$warning: #f7b500;
+$input_bg: #fafafa;
+$input_hint: #aaaaaa;
+$input_stroke: #f4f4f4;
+$border_radius: 10px;
+$transition: all 0.3s ease-in-out;
+$shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $input_hint;
+  height: 300px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li[data-sonner-toast=""] {
+  padding: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+button {
+  border: none;
+  background-color: unset;
+  color: #000;
+}
+
+.row {
+  margin: 0;
+}
+
+input[type="number"] {
+  &::-webkit-outer-spin-button {
+    display: none;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  @include clearInput();
+}
+
+.dropdown-menu {
+  border: 0 !important;
+  box-shadow: $shadow !important;
+  margin-top: 14px !important;
+  background: $white;
+  border-radius: 8px;
+  text-align: start !important;
+  padding: 8px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.page-header {
+  padding: 60px;
+  background: $main;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: url("/icons/patt.svg") no-repeat center/contain;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  &::before {
+    bottom: -70px;
+    right: -70px;
+  }
+
+  &::after {
+    bottom: -70px;
+    left: -70px;
+  }
+
+  .header-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 60px 0 10px 0;
+    color: $white;
+  }
+
+  .header-subtitle {
+    font-size: 16px;
+    color: #f0f0f0;
+  }
+}
