@@ -10,6 +10,7 @@ import Duas from "../routes/Duas";
 import Profile from "../routes/Profile";
 import Notifications from "../routes/Notifications";
 import ProtectionProvider from "./ProtectionProvider";
+import Terms from "../routes/Terms";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ export const router = createBrowserRouter([
       {
         path: "notifications",
         element: <Notifications />,
+      },
+      {
+        path:"terms-conditions",
+        element: <Terms />,
+
       }
     ],
   },

@@ -141,7 +141,7 @@
       "whatsapp": "WhatsApp"
     },
     "bottom": {
-      "privacy": "Privacy Policy",
+      "privacy": "Terms and Conditions",
       "terms": "Terms of Use",
       "contact": "Contact Us"
     },
@@ -202,6 +202,10 @@
     "snap": "Snapchat",
     "whats": "WhatsApp",
     "tiktok": "TikTok"
+  },
+  "terms":{
+    "Title": "Terms & Conditions",
+    "SubTitle": "Please read these terms and conditions carefully before using the website or services."
   }
 
 }

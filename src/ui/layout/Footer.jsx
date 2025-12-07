@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -117,14 +118,17 @@ export default function Footer() {
             <p>{t("footer.rights")} © {currentYear}</p>
 
             <div className="footer-links">
-              <a href="#">{t("footer.bottom.privacy")}</a>
+              <Link to="/terms-conditions">{t("footer.bottom.privacy")}</Link>
               <span className="divider">|</span>
-              <a href="#">{t("footer.bottom.terms")}</a>
+
+              <Link to="/">{t("footer.bottom.terms")}</Link>
               <span className="divider">|</span>
-              <a href="#">{t("footer.bottom.contact")}</a>
+
+              <Link to="/contact">{t("footer.bottom.contact")}</Link>
             </div>
           </div>
         </div>
+
       </div>
 
     </footer>
