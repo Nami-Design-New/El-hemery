@@ -986,6 +986,12 @@ body .error-page a:hover {
   color: #8e1838;
   border: 1px solid #8e1838;
 }
+body .terms-content p {
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
 body .hero-section {
   margin: 20px;
   height: 95vh;
