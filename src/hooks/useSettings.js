@@ -1,29 +1,25 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useSelector } from "react-redux";
 import axiosInstance from "../utils/axiosInstance";
 
-export default function useSettings() {
-  const [settings, setSettings] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+export default function useGetSettings() {
+  const { lang } = useSelector((state) => state.settings);
 
-  useEffect(() => {
-    const fetchSettings = async () => {
+  const { isLoading, data, error } = useQuery({
+    queryKey: ["settings", lang],
+    queryFn: async () => {
       try {
         const res = await axiosInstance.get("/setting");
         if (res.data.code === 200) {
-          setSettings(res.data.data);
-        } else {
-          setError("Failed to fetch settings");
+          console.log("use get setting ::" , res);
+          
+          return res.data.data || {};
         }
-      } catch (err) {
-        setError(err.message || "Something went wrong");
-      } finally {
-        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching settings:", error.message);
+        throw error;
       }
-    };
-
-    fetchSettings();
-  }, []);
-
-  return { settings, isLoading, error };
+    },
+  });
+  return { isLoading, data, error };
 }

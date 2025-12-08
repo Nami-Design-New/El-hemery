@@ -2,17 +2,40 @@ import { useTranslation } from "react-i18next";
 import InputField from "../ui/forms/InputField";
 import PageHeader from "../components/PageHeader";
 import useContact from "../hooks/useContact";
+import useGetSettings from "../hooks/useSettings"; 
 
 export default function Contact() {
   const { t } = useTranslation();
 
   const { register, handleSubmit, errors, isLoading } = useContact(t);
 
+   const { data: settings } = useGetSettings(); 
+
   const socialCards = [
-    { title: t("contact.insta"), icon: "fa-instagram", color: "#E1306C", link: "#" },
-    { title: t("contact.snap"), icon: "fa-snapchat", color: "#FFFC00", link: "#" },
-    { title: t("contact.whats"), icon: "fa-whatsapp", color: "#25D366", link: "#" },
-    { title: t("contact.tiktok"), icon: "fa-tiktok", color: "#000000", link: "#" },
+    {
+      title: t("contact.insta"),
+      icon: "fa-instagram",
+      color: "#E1306C",
+      link: settings?.instagram,
+    },
+    {
+      title: t("contact.snap"),
+      icon: "fa-snapchat",
+      color: "#FFFC00",
+      link: settings?.snapchat,
+    },
+    {
+      title: t("contact.whats"),
+      icon: "fa-whatsapp",
+      color: "#25D366",
+      link: settings?.whatsapp,
+    },
+    {
+      title: t("contact.tiktok"),
+      icon: "fa-tiktok",
+      color: "#000000",
+      link: settings?.tiktok_link,
+    },
   ];
 
   return (
@@ -28,6 +51,8 @@ export default function Contact() {
             <div className="col-6 col-md-3" key={i}>
               <a
                 href={card.link}
+                target="_blank"     
+                rel="noopener noreferrer"
                 className="social-card d-flex flex-column align-items-center justify-content-center p-4 rounded-4"
               >
                 <i
@@ -40,7 +65,6 @@ export default function Contact() {
           ))}
         </div>
       </div>
-
       <div className="form_section container">
         <div className="row align-items-center justify-content-between g-4">
           <div className="col-lg-6 col-12">

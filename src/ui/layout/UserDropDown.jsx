@@ -11,7 +11,7 @@ export default function UserDropDown() {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle className="user_dropdown d-flex align-items-center">
+      {/* <Dropdown.Toggle className="user_dropdown d-flex align-items-center">
         <img
           src={client?.avatar || "/icons/user.svg"}
           alt={client?.first_name}
@@ -19,6 +19,10 @@ export default function UserDropDown() {
         />
         <span className="ms-2">{client?.first_name + " " + client?.last_name}</span>
         <i className="fa fa-chevron-down ms-2"></i>
+      </Dropdown.Toggle> */}
+   <Dropdown.Toggle className="user_dropdown">
+        <span>{t("header.myAccount")}</span>
+        <i className="fa fa-chevron-down"></i>
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="custom-dropdown-menu text-end">

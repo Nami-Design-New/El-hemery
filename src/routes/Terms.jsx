@@ -1,32 +1,24 @@
+import useGetSettings from "../hooks/useSettings";
 import PageHeader from "../components/PageHeader";
-import useSettings from "../hooks/useSettings"; 
 
 export default function Terms() {
-  const { settings, isLoading, error } = useSettings();
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-
-  const paragraphs = settings?.terms_conditions_text
-    .split(/<\/?p>/)
-    .map(p => p.trim())
-    .filter(p => p.length > 0);
+  const { data: settings } = useGetSettings();
 
   return (
-    <div>
-      <PageHeader
+    <section className="main_section terms">
+         <PageHeader
         title="Terms & Conditions"
         subtitle="Please read carefully"
       />
-
-   <div className="terms-content container">
-  {paragraphs.map((text, index) => (
-    <p key={index}>
-      {text}
-    </p>
-  ))}
-</div>
-
-    </div>
+      <div className="container">
+        <div className="row">
+     
+          <div
+            className="col-12 p-2"
+            dangerouslySetInnerHTML={{ __html: settings?.terms_conditions_text}}
+          />
+        </div>
+      </div>
+    </section>
   );
 }
