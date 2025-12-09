@@ -584,11 +584,12 @@ header {
     }
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
-      text-align: center;
 
       .footer-col {
         align-items: center;
-
+      .footer-desc {
+        text-align: center;
+      }
         .footer-logo img {
           margin: 0 auto;
         }

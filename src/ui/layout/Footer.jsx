@@ -55,22 +55,18 @@ export default function Footer() {
     },
   ];
 
-  // روابط أسفل الفوتر
   const bottomLinks = [
     {
       label: t("footer.bottom.privacy"),
-      href: settings?.privacy || "/privacy",
-      external: true,
+      to: "/terms-conditions",
     },
     {
       label: t("footer.bottom.terms"),
-      href: settings?.["terms-conditions"] || "/terms-conditions",
-      external: true,
+      to: "/terms-conditions",
     },
     {
       label: t("footer.bottom.contact"),
-      href: "/contact",
-      external: false,
+      to: "/contact",
     },
   ];
 
@@ -90,7 +86,7 @@ export default function Footer() {
           <div className="row footer-grid">
 
             {/* Company Info */}
-            <div className="col-lg-4 col-md-4 col-6 footer-col">
+            <div className="col-lg-4 col-md-4 col-12 footer-col">
               <div className="footer-logo">
                 <img
                   src={settings?.logo_header || "/images/logo.svg"}
@@ -181,17 +177,7 @@ export default function Footer() {
             <div className="footer-links">
               {bottomLinks.map((link, i) => (
                 <span key={i}>
-                  {link.external ? (
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                  ) : (
-                    <Link to={link.href}>{link.label}</Link>
-                  )}
+                  <Link to={link.to}>{link.label}</Link>
 
                   {i !== bottomLinks.length - 1 && (
                     <span className="divider"> | </span>
@@ -199,6 +185,7 @@ export default function Footer() {
                 </span>
               ))}
             </div>
+
           </div>
         </div>
       </div>

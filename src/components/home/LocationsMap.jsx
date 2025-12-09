@@ -72,7 +72,13 @@ export default function LocationsMap() {
                   <div className="card-head">
                     <h4>{loc.title}</h4>
                     {active === loc.id && (
-                      <button className="close-btn" onClick={() => setActive(null)}>
+                      <button
+                        className="close-btn"
+                        onClick={() => {
+                          setActive(null);
+                          setHovered(null);
+                        }}
+                      >
                         <i className="fa-solid fa-xmark"></i>
                       </button>
                     )}

@@ -1051,84 +1051,27 @@
     }
   }
 
+
   @media (max-width: 768px) {
-    .map-bg {
-      // height: 600px;
-      background-position: center;
+
+  .map-pin {
+    max-width: 100%;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    .pin-label {
+      max-width: calc(100% - 20px);
+
+      text-align: center;
     }
 
-    .map-pin {
-      gap: 6px;
-      transform: none;
-      .pin-dot {
-        width: 18px;
-        height: 18px;
-      }
-
-      .pin-label {
-        display: block;
-        font-size: 13px;
-        padding: 4px 10px;
-      }
-
-      .pin-card {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 18px;
-        z-index: 1111;
-        .card-head h4 {
-          font-size: 16px;
-        }
-
-        .card-contacts {
-          gap: 14px;
-
-          .contact-row {
-            align-items: flex-start;
-            gap: 8px;
-
-            .contact-info {
-              .c-name {
-                font-size: 15px;
-              }
-              .c-role {
-                font-size: 13px;
-              }
-            }
-
-            .contact-actions {
-              display: flex;
-              justify-content: flex-start;
-              gap: 12px;
-
-              .contact-btn {
-                width: 36px;
-                height: 36px;
-                border-radius: 10px;
-
-                i {
-                  font-size: 18px;
-                }
-              }
-            }
-          }
-        }
-
-        .card-footer {
-          margin-top: 16px;
-          display: flex;
-          justify-content: center;
-
-          .visit {
-            width: 100%;
-            text-align: center;
-            padding: 12px 16px;
-            font-size: 15px;
-            border-radius: 10px;
-          }
-        }
-      }
+    .pin-card {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+     
     }
   }
+}
+
 }
