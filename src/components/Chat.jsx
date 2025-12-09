@@ -1,7 +1,22 @@
 import { useState } from "react";
+import useChat from "../hooks/useChat";
 
-export default function FloatingWebView() {
+export default function FloatingChat() {
   const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const {
+    messages,
+    loading,
+    startNewChat,
+    sendMessage,
+  } = useChat();
+
+  const handleSend = () => {
+    if (!message.trim()) return;
+    sendMessage(message);
+    setMessage("");
+  };
 
   return (
     <>
@@ -10,63 +25,60 @@ export default function FloatingWebView() {
       </div>
 
       {open && (
-        <div className="webview-popup">
-          <div className="webview-header">
-            <span>AI Assistant</span>
-            <button onClick={() => setOpen(false)}><i className="fa-regular fa-circle-xmark"></i></button>
+        <div className="chat-widget">
+          {/* Header */}
+          <div className="chat-header">
+            <div className="chat-title">مساعد ذكي</div>
+            <button className="close-chat" onClick={() => setOpen(false)}>
+              &times;
+            </button>
           </div>
 
-          <iframe
-            src="https://elhamiryelhag.nami-tec.com/en/chat"
-            title="webview"
-          />
+          {/* Buttons */}
+          <div className="chat-buttons">
+            <button className="old-chat">دردشة قديمة</button>
+            <button className="new-chat" onClick={startNewChat}>
+              دردشة جديدة
+            </button>
+          </div>
+
+          {/* Body */}
+          <div className="chat-body">
+            {messages.length === 0 && !loading && (
+              <div className="chat-center">
+                <div className="chat-images">
+                  <img src="/icons/robot.svg" alt="robot" />
+                  <img src="/images/logo.svg" alt="logo" />
+                </div>
+                <p>بحاجة إلى مساعدة!</p>
+              </div>
+            )}
+
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`chat-message ${msg.type === "user" ? "user" : "bot"}`}
+              >
+                {msg.text}
+              </div>
+            ))}
+          </div>
+
+          {/* Input */}
+          <div className="chat-input">
+            <input
+              type="text"
+              placeholder="اسأل مساعدك الذكي"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+            />
+            <button onClick={handleSend}>
+              <i className="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
         </div>
       )}
     </>
   );
 }
-
-// import { useState } from "react";
-
-// export default function FloatingWebView() {
-//   const [hover, setHover] = useState(false);
-
-//   const openChat = () => {
-//     window.open(
-//       "https://elhamiryelhag.nami-tec.com/en/chat", 
-//       "_blank",
-//       "width=420,height=700"
-//     );
-//   };
-
-//   return (
-//     <>
-//       <div
-//         onClick={openChat}
-//         onMouseEnter={() => setHover(true)}
-//         onMouseLeave={() => setHover(false)}
-//         style={{
-//           position: "fixed",
-//           bottom: "20px",
-//           right: "20px",
-//           width: "65px",
-//           height: "65px",
-//           borderRadius: "50%",
-//           cursor: "pointer",
-//           zIndex: 9999,
-//           transition: "0.2s ease",
-//           transform: hover ? "scale(1.05)" : "scale(1)",
-//         }}
-//       >
-//         <img
-//           src="/icons/chat.svg"   
-//           alt="chat"
-//           style={{
-//             width: "100%",
-//             height: "100%",
-//           }}
-//         />
-//       </div>
-//     </>
-//   );
-// }
