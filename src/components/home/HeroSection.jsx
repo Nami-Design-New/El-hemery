@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import useGetHome from "../../hooks/home/useGetSlider";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 export default function HeroSection() {
   const [fade, setFade] = useState(false);
@@ -32,7 +33,7 @@ export default function HeroSection() {
               <div
                 className="slide-bg"
                 style={{
-                  backgroundImage: `url(${item.image})`, 
+                  backgroundImage: `url(${item.image})`,
                 }}
               />
             </SwiperSlide>
@@ -42,36 +43,40 @@ export default function HeroSection() {
 
       <div className="overlay" />
 
-    <div className="hero-content">
-  <h1 className="hero-title">
-    {t("hero.title")}
-    <span>{t("hero.subtitle")}</span>
-  </h1>
+      <div className="hero-content">
+        <h1 className="hero-title">
+          {t("hero.title")}
+          <span>{t("hero.subtitle")}</span>
+        </h1>
 
-  <p className="hero-sub">
-    {t("hero.description")}
-  </p>
+        <p className="hero-sub">
+          {t("hero.description")}
+        </p>
 
-  <div className="hero-btns">
-    <button className="primary-btn">{t("hero.readMore")}</button>
-    <button className="secondary-btn">{t("hero.contactUs")}</button>
-  </div>
-</div>
+        <div className="hero-btns">
+          <Link to="/helpinregister" className="primary-btn">
+            {t("hero.helpinregister")}
+          </Link>
+          <Link to="/contact" className="secondary-btn">
+            {t("hero.contactUs")}
+          </Link>
+        </div>
+      </div>
 
-<div className="hero-stats">
-  <div className="stat-box">
-    <h2>15+</h2>
-    <p>{t("hero.stats.experience")}</p>
-  </div>
-  <div className="stat-box">
-    <h2>10,000+</h2>
-    <p>{t("hero.stats.hajjPilgrims")}</p>
-  </div>
-  <div className="stat-box">
-    <h2>12</h2>
-    <p>{t("hero.stats.countries")}</p>
-  </div>
-</div>
+      <div className="hero-stats">
+        <div className="stat-box">
+          <h2>15+</h2>
+          <p>{t("hero.stats.experience")}</p>
+        </div>
+        <div className="stat-box">
+          <h2>10,000+</h2>
+          <p>{t("hero.stats.hajjPilgrims")}</p>
+        </div>
+        <div className="stat-box">
+          <h2>12</h2>
+          <p>{t("hero.stats.countries")}</p>
+        </div>
+      </div>
 
     </section>
   );

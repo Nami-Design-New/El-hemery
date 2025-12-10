@@ -22,11 +22,6 @@ export default function UserDropDown() {
           {t("header.myAccount")}
         </Dropdown.Item>
 
-        <Dropdown.Item as={Link} to="/daus">
-          <i className="fa-solid fa-book-quran"></i>
-          {t("header.duaa")}
-        </Dropdown.Item>
-
         <Dropdown.Item as={Link} to="/notifications">
           <i className="fa-regular fa-bell"></i>
           {t("header.notifications")}

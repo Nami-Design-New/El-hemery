@@ -108,7 +108,6 @@ export default function FloatingChat() {
               </div>
             ))}
 
-            {/* {loading && <p style={{ textAlign: "center" }}>جاري التحميل...</p>} */}
           </div>
 
           {/* Input */}

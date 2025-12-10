@@ -6,6 +6,7 @@ import Footer from "../ui/layout/Footer";
 import useAuth from "../hooks/useAuth";
 import useGetHome from "../hooks/home/useGetSlider";
 import Preloader from "../ui/loaders/Preloader";
+import useGetHelp from "../hooks/useGetHelp";
 
 export default function RootLayout() {
   const location = useLocation();
@@ -15,8 +16,9 @@ export default function RootLayout() {
 
   const auth = useAuth();
   const {  isLoading: sliderLoading } = useGetHome();
+  const {  isLoading: registerLoading } = useGetHelp();
 
-  if (auth.loading || sliderLoading) return <Preloader />;
+  if (auth.loading || sliderLoading || registerLoading) return <Preloader />;
 
   return (
     <>

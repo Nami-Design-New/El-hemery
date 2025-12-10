@@ -4,7 +4,7 @@
     "about": "About Us",
     "myOrders": "My Orders",
     "faqs": "FAQs",
-    "services": "Services",
+    "services": "Company Services",
     "contact": "Contact Us",
     "login": "Login",
     "howWeWork": "How It Works",
@@ -90,8 +90,8 @@
     "compassDesc": "Qibla direction based on your location and device orientation"
   },
  "faqs": {
-    "Title": "FAQs & Guidelines",
-    "SubTitle": "Everything you need to know about your journey",
+  "Title": "Company Services",
+  "SubTitle": "Everything you need to know about our services",
     "guides": "Guidance & Instructional Manual",
     "mostCommon": "Most Common Questions",
     "carTravelers": "Travelers with their Cars",
@@ -105,7 +105,7 @@
     "title": "Your Spiritual Journey",
     "subtitle": "Starts Here",
     "description": "We provide full Hajj and Umrah services at Al Hamiry with the highest standards of comfort and safety for pilgrims.",
-    "readMore": "Read More",
+    "helpinregister": "Help In Register",
     "contactUs": "Contact Us",
     "stats": {
       "experience": "Years of Experience",
@@ -145,7 +145,7 @@
     },
     "bottom": {
       "privacy": "Terms and Conditions",
-      "terms": "Terms of Use",
+      "help": "Help in Register ",
       "contact": "Contact Us"
     },
     "rights": "All rights reserved"
@@ -216,7 +216,15 @@
   "values": "Values",
   "mission": "Mission",
   "vision": "Vision"
-}
+},
+  "helpRegister": {
+    "title": "Help with Registration",
+    "subtitle": "Get assistance from Hajj service coordinators",
+    "supervisorsTitle": "For registration help and Hajj service coordinators",
+    "noteTitle": "Note",
+    "mediaTitle": "Images and videos showing the registration process"
+  }
+
 
 
 }

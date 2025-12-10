@@ -3,15 +3,15 @@ import PageHeader from "../components/PageHeader.jsx";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
-import useGetGuides from "../hooks/faqs/useGetGuides";
-import useGetFaqs from "../hooks/faqs/useGetFaqs";
-import useGetByCar from "../hooks/faqs/useGetBycar";
-import useGetWalk from "../hooks/faqs/useGetWalk.js";
+import useGetGuides from "../hooks/services/useGetGuides.js";
+import useGetFaqs from "../hooks/services/useGetFaqs.js";
+import useGetByCar from "../hooks/services/useGetBycar.js";
+import useGetWalk from "../hooks/services/useGetWalk.js";
 
-import AccordionList from "../components/faqs/AccordionList.jsx";
-import TabsNavigation from "../components/faqs/TabsNavigation.jsx";
+import AccordionList from "../components/services/AccordionList";
+import TabsNavigation from "../components/services/TabsNavigation";
 
-export default function Faqs() {
+export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeAccordion, setActiveAccordion] = useState(null);
 

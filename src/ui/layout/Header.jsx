@@ -103,16 +103,11 @@ export default function Header({ auth }) {
             {t("header.about")}
           </NavLink>
 
-          <NavLink to="#services" onClick={handleNavLinkClick}>
+          <NavLink to="/services" onClick={handleNavLinkClick}>
             {t("header.services")}
           </NavLink>
           <NavLink to="/daus" onClick={handleNavLinkClick}>
             {t("header.duaa")}
-          </NavLink>
-
-
-          <NavLink to="/faqs" onClick={handleNavLinkClick}>
-            {t("header.faqs")}
           </NavLink>
 
           <NavLink to="/contact" onClick={handleNavLinkClick}>

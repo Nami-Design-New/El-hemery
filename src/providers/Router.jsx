@@ -5,12 +5,13 @@ import Error from "../routes/Error";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
 import Contact from "../routes/Contact";
-import Faqs from "../routes/Faqs";
 import Duas from "../routes/Duas";
 import Profile from "../routes/Profile";
 import Notifications from "../routes/Notifications";
 import ProtectionProvider from "./ProtectionProvider";
 import Terms from "../routes/Terms";
+import Services from "../routes/Services";
+import HelpRegister from "../routes/HelpRegister";
 
 export const router = createBrowserRouter([
   {
@@ -31,12 +32,16 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "faqs",
-        element: <Faqs />,
+        path: "services",
+        element: <Services />,
       },
       {
         path: "daus",
         element: <Duas />,
+      },
+        {
+        path: "helpinregister",
+        element: <HelpRegister />,
       },
       {
         path: "profile",
