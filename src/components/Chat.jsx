@@ -16,15 +16,16 @@ export default function FloatingChat() {
     activeThreadId,
   } = useChat();
 
-  const handleSend = () => {
+  const handleSend = async (e) => {
+    e.preventDefault();
     if (!message.trim()) return;
-    sendMessage(message);
+    await sendMessage(message);
     setMessage("");
   };
 
   const handleOldChatClick = (threadId) => {
     setShowOldChats(false);
-    getMessages(threadId); 
+    getMessages(threadId);
   };
 
   return (
@@ -117,9 +118,9 @@ export default function FloatingChat() {
               placeholder="اسأل مساعدك الذكي"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              onKeyDown={(e) => e.key === "Enter" && handleSend(e)}
             />
-            <button onClick={handleSend}>
+            <button onClick={(e) => handleSend(e)}>
               <i className="fa-solid fa-paper-plane"></i>
             </button>
           </div>
