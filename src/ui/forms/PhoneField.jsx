@@ -26,7 +26,7 @@ export default function PhoneField({ label, error, setValue, defaultCountry = "s
         buttonClass="phone-dropdown-btn"
         containerClass="phone-input-container"
         dropdownStyle={{ zIndex: 9999 }}
-        inputStyle={{ paddingLeft: "80px" }} // مساحة للكود + العلم
+        inputStyle={{ paddingLeft: "80px" }}
       />
 
       {error && (
