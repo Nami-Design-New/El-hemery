@@ -47,7 +47,7 @@ export default function Error() {
         </h1>
 
         <p className="error-description">{t(message)}</p>
-
+        <p>{error?.message}</p>
         <Link to="/">{t("errorPage.returnToHome")}</Link>
       </div>
     </div>
