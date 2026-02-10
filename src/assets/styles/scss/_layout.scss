@@ -36,20 +36,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem !important;
+    padding: 1.1rem 1.5rem !important;
 
     .logo {
       flex: 1;
       img {
         height: 55px;
         // @media screen and (min-width: 1200px) {
-          filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
         // }
       }
       @media screen and (max-width: 450px) {
         flex: unset;
         img {
-          height: 24px;
+          height: 40px;
         }
       }
     }
@@ -109,7 +109,7 @@ header {
       justify-content: flex-end;
       gap: 16px;
       button {
-          color: #fff;
+        color: #fff;
       }
       .toggle_menu {
         display: none;
@@ -123,16 +123,16 @@ header {
 
       .login {
         padding: 8px 24px;
-        border-radius: $border_radius;
-        background-color: $main;
-        color: $white;
+        background-color: $white;
+        color: $main;
+         border-radius: $border_radius;
         font-weight: 600;
         font-size: 14px;
         transition: $transition;
         border: 1px solid #ce82968e;
         &:hover {
-          background-color: $white;
-          color: $main;
+          background-color: $main;
+          color: $white;
         }
       }
     }
@@ -336,7 +336,8 @@ header {
 }
 ////
 .footer {
-  background: linear-gradient(135deg, darken($main, 12%) 0%, $main 100%),
+  background:
+    linear-gradient(135deg, darken($main, 12%) 0%, $main 100%),
     url("../images/bg.png") no-repeat center/cover;
   background-attachment: fixed;
   color: $white;
@@ -522,9 +523,9 @@ header {
 
       .footer-col {
         align-items: center;
-      .footer-desc {
-        text-align: center;
-      }
+        .footer-desc {
+          text-align: center;
+        }
         .footer-logo img {
           margin: 0 auto;
         }

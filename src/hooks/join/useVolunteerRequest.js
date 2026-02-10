@@ -4,24 +4,23 @@ import { toast } from "sonner";
 import axiosInstance from "../../utils/axiosInstance";
 
 export default function useVolunteerRequest(t, onSuccess, type) {
- const defaultValues =
-  type === "hajj"
-    ? {
-        name: "",
-        age: "",
-        booking_number: "",
-        city: "",
-      }
-    : {
-        name: "",
-        age: "",
-        nationality: "",
-        phone: "",
-        phone_code: "",
-        country_iso: "",
-        experience: "",
-      };
-
+  const defaultValues =
+    type === "hajj"
+      ? {
+          name: "",
+          age: "",
+          booking_number: "",
+          city: "",
+        }
+      : {
+          name: "",
+          age: "",
+          nationality: "",
+          phone: "",
+          phone_code: "",
+          country_iso: "",
+          experience: "",
+        };
 
   const {
     register,
@@ -66,6 +65,6 @@ export default function useVolunteerRequest(t, onSuccess, type) {
     errors,
     isLoading: mutation.isLoading,
     reset,
-   setValue, 
+    setValue,
   };
 }

@@ -102,7 +102,16 @@
     "ctaTitle": "Didn't find what you're looking for?",
     "ctaSubtitle": "Contact us directly and our team will be happy to answer all your inquiries",
     "callUs": "Call Us",
-    "sendMessage": "Send Message"
+    "sendMessage": "Send Message",
+    "coordinatesSubtitle": "List of supervisors and coordinators to assist you during the journey",
+    "groupsSubtitle": "Easily find the locations of group gatherings",
+    "carTravelersSubtitle": "Important guidelines for travelers coming by car to make their journey easier",
+    "mostCommonSubtitle": "Here are the most frequently asked questions with detailed answers",
+    "commonFatwaSubtitle": "The most common fatwas needed by pilgrims",
+    "guidesSubtitle": "Comprehensive guidance to facilitate your journey from start to return",
+    "routePlanSubtitle": "Discover the best routes and travel plans during the rituals",
+    "tipsSubTitle": "Guidelines and tips to enhance your devotion and earn rewards while performing Tasbeeh"
+
   },
   "hero": {
     "title": "Your Spiritual Journey",
@@ -114,7 +123,9 @@
       "experience": "Years of Experience",
       "hajjPilgrims": "Pilgrims Served",
       "countries": "Clients Worldwide"
-    }
+    },
+    "hajWebsite": "Awareness Guides Link _ Multi-language _ Ministry of Hajj and Umrah Website"
+
   },
   "footer": {
     "description": "We provide integrated Hajj and Umrah services with the highest standards of comfort and safety for pilgrims for over 15 years.",

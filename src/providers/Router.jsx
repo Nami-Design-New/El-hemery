@@ -14,6 +14,15 @@ import Services from "../routes/Services";
 import HelpRegister from "../routes/HelpRegister";
 import Jobs from "../routes/jobs";
 import JoinUs from "../routes/JoinUs";
+import Guidance from "../routes/Guidance";
+import CommonFaqs from "../routes/CommonFaqs";
+import CarTravelers from "../routes/CarTravelers";
+import RoutePlan from "../routes/RoutePlan";
+import CommonFatwa from "../routes/CommonFatwa";
+import Coordinates from "../routes/Coordinates";
+import Groups from "../routes/Groups";
+import Tips from "../routes/Tips";
+import ServicesCompany from "../routes/ServicesCompany";
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +50,7 @@ export const router = createBrowserRouter([
         path: "daus",
         element: <Duas />,
       },
-        {
+      {
         path: "helpinregister",
         element: <HelpRegister />,
       },
@@ -59,18 +68,54 @@ export const router = createBrowserRouter([
         element: <Notifications />,
       },
       {
-        path:"terms-conditions",
+        path: "terms-conditions",
         element: <Terms />,
       },
-        {
-        path:"jobs",
+      {
+        path: "jobs",
         element: <Jobs />,
       }
       ,
-        {
-        path:"joinus",
+      {
+        path: "joinus",
         element: <JoinUs />,
-      }
+      },
+      {
+        path: "guidance",
+        element: <Guidance />
+      },
+      {
+        path: "CommonFaqs",
+        element: <CommonFaqs />
+      },
+      {
+        path: "CarTravelers",
+        element: <CarTravelers />
+      },
+      {
+        path: "RoutePlan",
+        element: <RoutePlan />
+      },
+      {
+        path: "CommonFatwa",
+        element: <CommonFatwa />
+      },
+      {
+        path: "Coordinates",
+        element: <Coordinates />
+      },
+      {
+        path: "Groups",
+        element: <Groups />
+      },
+      {
+        path: "tips",
+        element: <Tips />
+      },
+      {
+        path: "ServicesPage",
+        element: <ServicesCompany />
+      },
     ],
   },
 ]);
