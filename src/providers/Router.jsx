@@ -24,107 +24,110 @@ import Coordinates from "../routes/Coordinates";
 import Groups from "../routes/Groups";
 import Tips from "../routes/Tips";
 import ServicesCompany from "../routes/ServicesCompany";
+
 const getBasename = () => {
   const currentUrl = window.location.href;
   return currentUrl.includes("designforge") ? "/El-hemery" : "";
 };
+
 console.log(getBasename());
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "signin",
-        element: <Login />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
-        path: "services",
-        element: <Services />,
-      },
-      {
-        path: "daus",
-        element: <Duas />,
-      },
-      {
-        path: "helpinregister",
-        element: <HelpRegister />,
-      },
-      {
-        path: "profile",
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <RootLayout />,
+      errorElement: <Error />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "signin",
+          element: <Login />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+        {
+          path: "services",
+          element: <Services />,
+        },
+        {
+          path: "daus",
+          element: <Duas />,
+        },
+        {
+          path: "helpinregister",
+          element: <HelpRegister />,
+        },
+        {
+          path: "profile",
 
-        element: (
-          <ProtectionProvider>
-            <Profile />
-          </ProtectionProvider>
-        ),
-      },
-      {
-        path: "notifications",
-        element: <Notifications />,
-      },
-      {
-        path: "terms-conditions",
-        element: <Terms />,
-      },
-      {
-        path: "jobs",
-        element: <Jobs />,
-      },
-      {
-        path: "joinus",
-        element: <JoinUs />,
-      },
-      {
-        path: "guidance",
-        element: <Guidance />,
-      },
-      {
-        path: "CommonFaqs",
-        element: <CommonFaqs />,
-      },
-      {
-        path: "CarTravelers",
-        element: <CarTravelers />,
-      },
-      {
-        path: "RoutePlan",
-        element: <RoutePlan />,
-      },
-      {
-        path: "CommonFatwa",
-        element: <CommonFatwa />,
-      },
-      {
-        path: "Coordinates",
-        element: <Coordinates />,
-      },
-      {
-        path: "Groups",
-        element: <Groups />,
-      },
-      {
-        path: "tips",
-        element: <Tips />,
-      },
-      {
-        path: "ServicesPage",
-        element: <ServicesCompany />,
-      },
-    ],
-  },
-
+          element: (
+            <ProtectionProvider>
+              <Profile />
+            </ProtectionProvider>
+          ),
+        },
+        {
+          path: "notifications",
+          element: <Notifications />,
+        },
+        {
+          path: "terms-conditions",
+          element: <Terms />,
+        },
+        {
+          path: "jobs",
+          element: <Jobs />,
+        },
+        {
+          path: "joinus",
+          element: <JoinUs />,
+        },
+        {
+          path: "guidance",
+          element: <Guidance />,
+        },
+        {
+          path: "CommonFaqs",
+          element: <CommonFaqs />,
+        },
+        {
+          path: "CarTravelers",
+          element: <CarTravelers />,
+        },
+        {
+          path: "RoutePlan",
+          element: <RoutePlan />,
+        },
+        {
+          path: "CommonFatwa",
+          element: <CommonFatwa />,
+        },
+        {
+          path: "Coordinates",
+          element: <Coordinates />,
+        },
+        {
+          path: "Groups",
+          element: <Groups />,
+        },
+        {
+          path: "tips",
+          element: <Tips />,
+        },
+        {
+          path: "ServicesPage",
+          element: <ServicesCompany />,
+        },
+      ],
+    },
+  ],
   {
     basename: getBasename(),
   },
-]);
+);
