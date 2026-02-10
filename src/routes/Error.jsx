@@ -36,6 +36,7 @@ export default function Error() {
   };
 
   const { status, title, message } = getErrorDetails();
+  console.log(error);
 
   return (
     <div className="error-page">
