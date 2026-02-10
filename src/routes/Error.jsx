@@ -6,19 +6,19 @@ export default function Error() {
   const { t } = useTranslation();
 
   const getErrorDetails = () => {
-    // if (isRouteErrorResponse(error)) {
-    //   return {
-    //     status: error.status,
-    //     title:
-    //       error.status === 404
-    //         ? "errorPage.pageNotFoundTitle"
-    //         : "errorPage.errorTitle",
-    //     message:
-    //       error.status === 404
-    //         ? "errorPage.pageNotFoundMessage"
-    //         : "errorPage.applicationErrorMessage",
-    //   };
-    // }
+    if (isRouteErrorResponse(error)) {
+      return {
+        status: error.status,
+        title:
+          error.status === 404
+            ? "errorPage.pageNotFoundTitle"
+            : "errorPage.errorTitle",
+        message:
+          error.status === 404
+            ? "errorPage.pageNotFoundMessage"
+            : "errorPage.applicationErrorMessage",
+      };
+    }
 
     if (error instanceof Error) {
       return {
