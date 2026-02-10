@@ -203,7 +203,7 @@ export default function FloatingChat() {
               <div className="chat-center">
                 <div className="chat-images">
                   <img src="/icons/robot.svg" alt="robot" />
-                  <img src="/images/logo.svg" alt="logo" />
+                  <img src="images/logo.svg" alt="logo" />
                 </div>
                 <p>بحاجة إلى مساعدة!</p>
               </div>

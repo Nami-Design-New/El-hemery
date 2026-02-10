@@ -102,7 +102,7 @@ export default function Contact() {
 
           <div className="col-lg-5 col-12 d-lg-block d-none">
             <div className="contact-img ps-lg-4">
-              <img src="/images/h1.png" alt="Contact" className="w-100 rounded-3" />
+              <img src="images/h1.png" alt="Contact" className="w-100 rounded-3" />
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function Login() {
 
           <div className="col-lg-5 col-12 p-2 d-lg-block d-none">
             <div className="img">
-              <img src="/images/h1.png" alt="auth" />
+              <img src="images/h1.png" alt="auth" />
             </div>
           </div>
 

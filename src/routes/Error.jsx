@@ -40,7 +40,7 @@ export default function Error() {
   return (
     <div className="error-page">
       <div className="container">
-        <img src="/images/error.png" alt={`Error ${status}`} />
+        <img src="images/error.png" alt={`Error ${status}`} />
 
         <h1 className="error-title">
           {t("errorPage.oops")} {t(title)} ({status})

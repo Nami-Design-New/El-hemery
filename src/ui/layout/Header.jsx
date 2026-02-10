@@ -89,12 +89,12 @@ export default function Header({ auth }) {
       <nav className="container">
         <div className={`layer ${openMenu ? "open" : ""}`}></div>
         <Link to="/" className="logo">
-          <img src="/images/logo.svg" alt="" />
+          <img src="images/logo.svg" alt="" />
         </Link>
 
         <div className={`nav_links ${openMenu ? "open" : ""}`}>
           <Link to="/" className="logo">
-            <img src="/images/logo.svg" alt="" />
+            <img src="images/logo.svg" alt="" />
           </Link>
           <NavLink to="/">{t("header.home")}</NavLink>
 

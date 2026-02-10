@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="col-lg-4 col-md-4 col-12 footer-col">
               <div className="footer-logo">
                 <img
-                  src={settings?.logo_header || "/images/logo.svg"}
+                  src={settings?.logo_header || "images/logo.svg"}
                   alt={settings?.website_name || "Website Logo"}
                 />
               </div>
