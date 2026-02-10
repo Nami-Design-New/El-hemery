@@ -26,8 +26,10 @@ import Tips from "../routes/Tips";
 import ServicesCompany from "../routes/ServicesCompany";
 const getBasename = () => {
   const currentUrl = window.location.href;
-  return currentUrl.includes('designforge') ? '/El-hemery' : '';
+  return currentUrl.includes("designforge") ? "/El-hemery" : "";
 };
+console.log(getBasename());
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -61,11 +63,11 @@ export const router = createBrowserRouter([
       {
         path: "profile",
 
-        element:
+        element: (
           <ProtectionProvider>
             <Profile />
           </ProtectionProvider>
-
+        ),
       },
       {
         path: "notifications",
@@ -78,52 +80,51 @@ export const router = createBrowserRouter([
       {
         path: "jobs",
         element: <Jobs />,
-      }
-      ,
+      },
       {
         path: "joinus",
         element: <JoinUs />,
       },
       {
         path: "guidance",
-        element: <Guidance />
+        element: <Guidance />,
       },
       {
         path: "CommonFaqs",
-        element: <CommonFaqs />
+        element: <CommonFaqs />,
       },
       {
         path: "CarTravelers",
-        element: <CarTravelers />
+        element: <CarTravelers />,
       },
       {
         path: "RoutePlan",
-        element: <RoutePlan />
+        element: <RoutePlan />,
       },
       {
         path: "CommonFatwa",
-        element: <CommonFatwa />
+        element: <CommonFatwa />,
       },
       {
         path: "Coordinates",
-        element: <Coordinates />
+        element: <Coordinates />,
       },
       {
         path: "Groups",
-        element: <Groups />
+        element: <Groups />,
       },
       {
         path: "tips",
-        element: <Tips />
+        element: <Tips />,
       },
       {
         path: "ServicesPage",
-        element: <ServicesCompany />
+        element: <ServicesCompany />,
       },
     ],
   },
 
-   {
-     basename: getBasename(),
-   }
+  {
+    basename: getBasename(),
+  },
 ]);
