@@ -23,7 +23,10 @@ import Coordinates from "../routes/Coordinates";
 import Groups from "../routes/Groups";
 import Tips from "../routes/Tips";
 import ServicesCompany from "../routes/ServicesCompany";
-
+const getBasename = () => {
+  const currentUrl = window.location.href;
+  return currentUrl.includes('designforge') ? '/El-hemery' : '';
+};
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -118,4 +121,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+
+   {
+     basename: getBasename(),
+   }
 ]);
