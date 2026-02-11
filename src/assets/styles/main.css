@@ -493,7 +493,7 @@ body header nav .actions .login:hover {
 }
 body header.sticky nav {
   padding: 0 16px;
-  background-image: url("..images/hed.png");
+  background-image: url("../images/hed.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -631,8 +631,8 @@ body .preloader {
 body .preloader .preloaderImg {
   width: 120px;
   height: 120px;
-  -webkit-mask-image: url("..images/logo.svg");
-          mask-image: url("..images/logo.svg");
+  -webkit-mask-image: url("../images/logo.svg");
+          mask-image: url("../images/logo.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-position: center;
@@ -646,7 +646,7 @@ body .preloader .preloaderImg::before {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("..images/logo.svg");
+  background-image: url("../images/logo.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -674,7 +674,7 @@ body .preloader .preloaderImg::after {
   }
 }
 body .footer {
-  background: linear-gradient(135deg, rgb(89.6481927711, 15.1518072289, 35.3542168675) 0%, #8e1838 100%), url("..images/bg.png") no-repeat center/cover;
+  background: linear-gradient(135deg, rgb(89.6481927711, 15.1518072289, 35.3542168675) 0%, #8e1838 100%), url("../images/bg.png") no-repeat center/cover;
   background-attachment: fixed;
   color: #fff;
   position: relative;
@@ -1390,7 +1390,7 @@ body .about-section .about-company p {
 body .services-section {
   padding-top: 110px;
   text-align: center;
-  background: url("images/h1.png") no-repeat center/cover;
+  background: url("/images/h1.png") no-repeat center/cover;
   position: relative;
   overflow: hidden;
 }
@@ -1570,7 +1570,7 @@ body .services-section .center-half-circle p {
 body .tasbeeh-section {
   background: linear-gradient(180deg, #fff3f6 0%, #fff 100%);
   padding: 100px 0;
-  background-image: url("..images/bg.png");
+  background-image: url("../images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1832,7 +1832,7 @@ body .tasbeeh-section .tasbeeh-wrapper .tasbeeh-stats .tips-card .tips-list li:l
 }
 body .gallery-section {
   padding: 50px 0;
-  background-image: url("..images/hed.png");
+  background-image: url("../images/hed.png");
   background-size: cover;
   background-position: unset;
   background-repeat: no-repeat;
@@ -1981,7 +1981,7 @@ body .locations-section .title {
 body .locations-section .map-bg {
   position: relative;
   height: 450px;
-  background-image: url("images/map.jpg");
+  background-image: url("../images/map.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -2363,7 +2363,7 @@ body .tips-page .tips-list li {
 }
 body .auth_section {
   padding: 20px;
-  background-image: url("..images/bg.png");
+  background-image: url("../images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

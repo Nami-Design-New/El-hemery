@@ -376,15 +376,15 @@ button {
   .chat-center {
     height: 100%;
     display: flex;
-    flex-direction: column;      // الصور فوق والنص تحتهم
+    flex-direction: column;      
     align-items: center;
-    justify-content: center;     // يوسّط كل المحتوى عمودياً
+    justify-content: center;     
 
     .chat-images {
-      display: flex;             // يخلي الصور جنب بعض
+      display: flex;             
       align-items: center;
-      gap: 15px;                 // مسافة بين الصورتين
-      margin-bottom: 12px;       // مسافة بين الصور والنص
+      gap: 15px;                 
+      margin-bottom: 12px;       
     }
 
     img {

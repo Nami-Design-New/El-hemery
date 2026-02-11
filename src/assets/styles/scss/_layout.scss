@@ -146,7 +146,7 @@ header {
   &.sticky {
     nav {
       padding: 0 16px;
-      background-image: url("..images/hed.png");
+      background-image: url("../images/hed.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -292,7 +292,7 @@ header {
   .preloaderImg {
     width: 120px;
     height: 120px;
-    mask-image: url("..images/logo.svg");
+    mask-image: url("../images/logo.svg");
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -303,7 +303,7 @@ header {
       display: block;
       width: 100%;
       height: 100%;
-      background-image: url("..images/logo.svg");
+      background-image: url("../images/logo.svg");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -338,7 +338,7 @@ header {
 .footer {
   background:
     linear-gradient(135deg, darken($main, 12%) 0%, $main 100%),
-    url("..images/bg.png") no-repeat center/cover;
+    url("../images/bg.png") no-repeat center/cover;
   background-attachment: fixed;
   color: $white;
   position: relative;
