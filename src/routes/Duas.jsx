@@ -115,12 +115,12 @@ export default function Duas() {
                 style={{ transform: `rotate(${finalRotation}deg)` }}
               >
                 <img
-                  src="/icons/qiblah.svg"
+                  src="icons/qiblah.svg"
                   className="compass-base"
                   alt={t("duasPage.compassAlt")}
                 />
                 <img
-                  src="/icons/arr.svg"
+                  src="icons/arr.svg"
                   className="compass-arrow"
                   alt={t("duasPage.arrowAlt")}
                 />

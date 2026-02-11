@@ -141,7 +141,7 @@ export default function FloatingChat() {
   return (
     <>
       <div className="floating-icon" onClick={() => setOpen(true)}>
-        <img src="/icons/chat.svg" alt="chat" />
+        <img src="icons/chat.svg" alt="chat" />
       </div>
 
       {open && (
@@ -202,7 +202,7 @@ export default function FloatingChat() {
             {!isGettingMessages && !hasMessages && (
               <div className="chat-center">
                 <div className="chat-images">
-                  <img src="/icons/robot.svg" alt="robot" />
+                  <img src="icons/robot.svg" alt="robot" />
                   <img src="images/logo.svg" alt="logo" />
                 </div>
                 <p>بحاجة إلى مساعدة!</p>

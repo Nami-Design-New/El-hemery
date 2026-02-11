@@ -77,7 +77,7 @@ export default function Tasbeeh() {
                             onClick={() => increment()}
                         >
                             <img
-                                src="/icons/Sebha.svg"
+                                src="icons/Sebha.svg"
                                 alt={t("tasbeeh.imageAlt")}
                                 className="sebha-img"
                                 draggable={false}
