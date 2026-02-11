@@ -171,7 +171,10 @@
   border-radius: 30px;
   margin: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-
+  @media (max-width: 1024px) {
+    margin: 0;
+    border-radius: 0px;
+  }
   .hero-grid {
     display: flex;
     gap: 20px;

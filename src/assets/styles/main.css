@@ -1113,6 +1113,12 @@ body .hero-updated {
   /* Full Width Tab Below Slider */
   /* Responsive */
 }
+@media (max-width: 1024px) {
+  body .hero-updated {
+    margin: 0;
+    border-radius: 0px;
+  }
+}
 body .hero-updated .hero-grid {
   display: flex;
   gap: 20px;
