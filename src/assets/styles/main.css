@@ -354,6 +354,7 @@ body header {
   left: 0;
   width: 100%;
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 1200px) {
   body header {
@@ -402,6 +403,7 @@ body header nav .nav_links {
   align-items: center;
   justify-content: center;
   gap: 42px;
+  transition: all 0.3s ease-in-out;
 }
 body header nav .nav_links .logo {
   display: none;

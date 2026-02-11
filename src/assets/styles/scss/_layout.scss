@@ -8,6 +8,7 @@ header {
   // backdrop-filter: blur(24px);
   // background: $white;
   // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: $transition;
 
   @media screen and (max-width: 1200px) {
     top: 0;
@@ -58,6 +59,7 @@ header {
       flex: 2;
       @include centerFlex();
       gap: 42px;
+    transition: $transition;
 
       .logo {
         display: none;
