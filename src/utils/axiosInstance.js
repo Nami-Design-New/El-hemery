@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://elhamiryelhag.nami-tec.com/api/";
+axios.defaults.baseURL = "https://dashboard.alhemery.sa/api/";
 axios.defaults.headers.common["Content-Type"] = "application/json";
 axios.defaults.headers.common["Accept"] = "application/json";
 
